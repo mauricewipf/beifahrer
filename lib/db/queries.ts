@@ -45,6 +45,21 @@ const client = postgres(process.env.POSTGRES_URL!, {
 });
 const db = drizzle(client);
 
+async function checkUserTableExists() {
+  try {
+    const result = await client`
+      SELECT to_regclass('public."User"') AS table_exists;
+    `;
+    if (result[0].table_exists === null) {
+      console.warn('⚠️ Table "User" does not exist in the public schema.');
+    } else {
+      console.log('✅ Table "User" exists.');
+    }
+  } catch (err) {
+    console.error('❌ Failed to check if "User" table exists:', err);
+  }
+}
+
 export async function getUser(email: string): Promise<Array<User>> {
   try {
     return await db.select().from(user).where(eq(user.email, email));
