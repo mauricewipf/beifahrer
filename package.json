@@ -16,6 +16,8 @@
     "@shopify/flash-list": "1.6.3",
     "@supabase/supabase-js": "^2.39.7",
     "ai": "4.3.13",
+    "ajv": "^8.12.0",
+    "ajv-keywords": "^5.1.0",
     "date-fns": "^3.3.1",
     "expo": "~50.0.8",
     "expo-auth-session": "~5.4.0",
