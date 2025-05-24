@@ -11,8 +11,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@react-navigation/native": "^6.1.14",
-    "@react-navigation/native-stack": "^6.9.22",
+    "@react-navigation/native": "6.1.9",
+    "@react-navigation/native-stack": "6.9.17",
     "@shopify/flash-list": "1.6.3",
     "@supabase/supabase-js": "^2.39.7",
     "ai": "4.3.13",
